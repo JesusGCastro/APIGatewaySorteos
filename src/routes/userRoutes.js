@@ -46,4 +46,25 @@ router.get("/perfil", async (req, res) => {
     }
 });
 
+//Verificar token
+router.get("/verify-token", async (req, res) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ valid: false, error: "Token no proporcionado" });
+  }
+
+  try {
+    const response = await axios.get(`${USER_SERVICE_URL}/verify-token`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    res.status(response.status).json(response.data);
+  } catch (error) {
+    res.status(error.response ? error.response.status : 500).json({
+      valid: false,
+      error: "Error en gateway al verificar token"
+    });
+  }
+});
+
+
 export default router;
