@@ -1,19 +1,19 @@
 {
   "name": "apigateway",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API Gateway para centralizar las peticiones entre el frontend y los microservicios (por ejemplo, ServicioUsuarios).",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "axios": "^1.13.2",
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2"
   }
 }
