@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 // Rutas
-app.use("/api/users", userRoutes);
+app.use("", userRoutes);
 app.use("/api/raffles", raffleRoutes);
 
 // Puerto
