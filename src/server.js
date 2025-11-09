@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
-import raffleRoutes from "./routes/raffleRoutes.js"; // <-- 1. IMPORTAR
+import raffleRoutes from "./routes/raffleRoutes.js";
 
 dotenv.config();
 
@@ -10,13 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://tu-frontend.vercel.app"
-    ],
-    credentials: true
-}));
+app.use(cors());
 
 // Rutas
 app.use("/api/users", userRoutes);
