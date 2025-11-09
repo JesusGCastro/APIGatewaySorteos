@@ -36,5 +36,6 @@ router.get('/', forwardRequest);
 router.post('/', forwardRequest);
 router.get('/:raffleId', forwardRequest);
 router.post('/:raffleId/tickets', forwardRequest);
+router.get('/:raffleId/tickets', forwardRequest);
 
 export default router;
