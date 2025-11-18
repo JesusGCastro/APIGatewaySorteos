@@ -34,6 +34,10 @@ const forwardRequest = async (req, res) => {
 // Rutas para cada peticion
 router.get('/', forwardRequest);
 router.post('/', forwardRequest);
+router.get('/my-raffles', forwardRequest);
+router.get('/tickets/:raffleId/user', forwardRequest);
+router.get('/tickets/aparted/:raffleId/user', forwardRequest);
+router.put('/tickets/pay/:raffleId', forwardRequest);
 router.get('/:raffleId', forwardRequest);
 router.post('/:raffleId/tickets', forwardRequest);
 router.get('/:raffleId/tickets', forwardRequest);
