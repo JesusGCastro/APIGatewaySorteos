@@ -42,6 +42,7 @@ router.get('/:raffleId', forwardRequest);
 router.post('/:raffleId/tickets', forwardRequest);
 router.get('/:raffleId/tickets', forwardRequest);
 router.put('/admin/state/:raffleId', forwardRequest);
+router.put('/admin/update/:raffleId', forwardRequest);
 router.get('/admin/ended', forwardRequest);
 router.get('/admin/inactive', forwardRequest);
 
