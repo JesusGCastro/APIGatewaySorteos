@@ -32,19 +32,25 @@ const forwardRequest = async (req, res) => {
 };
 
 // Rutas para cada peticion
-router.get('/', forwardRequest);
-router.post('/', forwardRequest);
-router.get('/my-raffles', forwardRequest);
-router.get('/tickets/:raffleId/user', forwardRequest);
-router.get('/tickets/aparted/:raffleId/user', forwardRequest);
-router.put('/tickets/pay/:raffleId', forwardRequest);
-router.put('/tickets/pay/:raffleId/transaction', forwardRequest);
-router.get('/:raffleId', forwardRequest);
-router.post('/:raffleId/tickets', forwardRequest);
-router.get('/:raffleId/tickets', forwardRequest);
 router.put('/admin/state/:raffleId', forwardRequest);
 router.put('/admin/update/:raffleId', forwardRequest);
 router.get('/admin/ended', forwardRequest);
 router.get('/admin/inactive', forwardRequest);
+
+router.get('/tickets/:raffleId/user', forwardRequest);
+router.get('/tickets/aparted/:raffleId/user', forwardRequest);
+
+
+router.get('/my-raffles', forwardRequest);
+
+router.get('/', forwardRequest);
+router.post('/', forwardRequest);
+
+router.get('/:raffleId', forwardRequest);
+router.post('/:raffleId/tickets', forwardRequest);
+router.get('/:raffleId/tickets', forwardRequest);
+
+router.put('/tickets/pay/:raffleId', forwardRequest);
+router.put('/tickets/pay/:raffleId/transaction', forwardRequest);
 
 export default router;
