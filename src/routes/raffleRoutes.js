@@ -38,6 +38,7 @@ router.get('/my-raffles', forwardRequest);
 router.get('/tickets/:raffleId/user', forwardRequest);
 router.get('/tickets/aparted/:raffleId/user', forwardRequest);
 router.put('/tickets/pay/:raffleId', forwardRequest);
+router.put('/tickets/pay/:raffleId/transaction', forwardRequest);
 router.get('/:raffleId', forwardRequest);
 router.post('/:raffleId/tickets', forwardRequest);
 router.get('/:raffleId/tickets', forwardRequest);
