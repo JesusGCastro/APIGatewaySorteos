@@ -40,6 +40,9 @@ router.get('/admin/inactive', forwardRequest);
 router.get('/tickets/:raffleId/user', forwardRequest);
 router.get('/tickets/aparted/:raffleId/user', forwardRequest);
 
+router.get('/payments/:raffleId', forwardRequest);
+router.get('/payments/details/:paymentId', forwardRequest);
+
 router.get('/summary/:raffleId', forwardRequest);
 
 router.get('/my-raffles', forwardRequest);
