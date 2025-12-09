@@ -60,4 +60,8 @@ router.put('/tickets/pay/:raffleId/transaction', forwardRequest);
 router.get('/admin/tickets/reserved/:raffleId', forwardRequest);
 router.put('/admin/tickets/release/:raffleId', forwardRequest);
 
+// Marcar boletos como pagados manualmente (Panel Admin)
+router.put('/admin/tickets/mark-paid/:raffleId/payment/:paymentId', forwardRequest);
+
+
 export default router;
