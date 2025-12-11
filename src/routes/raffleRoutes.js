@@ -59,5 +59,6 @@ router.put('/tickets/pay/:raffleId/transaction', forwardRequest);
 
 router.get('/admin/tickets/reserved/:raffleId', forwardRequest);
 router.put('/admin/tickets/release/:raffleId', forwardRequest);
+router.put('/user/tickets/release/:raffleId', forwardRequest);
 
 export default router;
